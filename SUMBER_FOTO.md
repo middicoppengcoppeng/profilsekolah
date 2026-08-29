@@ -1,4 +1,4 @@
-# Panduan Aset Foto MIS DDI Coppeng - Coppeng
+# Panduan Aset Foto MIS DDI COPPENG COPPENG
 
 Untuk mempermudah pengelolaan foto asli madrasah, saya telah membuatkan struktur folder khusus di dalam folder `public/images/`.
 
@@ -14,7 +14,7 @@ Saat Anda sudah memiliki foto aslinya, Anda hanya perlu:
 
 | Nama File Harapan | Digunakan Di | Keterangan |
 | :--- | :--- | :--- |
-| `logo.png` | Navbar, Footer, About | Logo resmi MIS DDI Coppeng - Coppeng (tanpa background / transparan) |
+| `logo.png` | Navbar, Footer, About | Logo resmi MIS DDI COPPENG COPPENG (tanpa background / transparan) |
 | `favicon.svg` atau `favicon.png` | Tab Browser | Ikon kecil untuk tab browser |
 | `og-image.jpg` | Metadata SEO | Foto landscape yang muncul saat link website disebarkan di WhatsApp/Facebook (Rekomendasi ukuran: 1200x630px) |
 

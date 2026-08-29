@@ -49,7 +49,7 @@ export default function About() {
           <div className="mt-12 lg:mt-0 fade-in-section" ref={useFadeIn() as React.RefObject<HTMLDivElement>}>
             <span className="section-tag">Tentang Kami</span>
             <h2 id="tentang-title" className="section-title">
-              Mengenal MIS DDI Coppeng - Coppeng
+              Mengenal MIS DDI COPPENG COPPENG
             </h2>
 
             <p className="text-neutral-600 leading-relaxed mb-6">
@@ -60,7 +60,7 @@ export default function About() {
             </p>
 
             <p className="text-neutral-600 leading-relaxed mb-8">
-              Selama puluhan tahun, MIS DDI Coppeng - Coppeng telah melahirkan ribuan alumni yang sukses di berbagai 
+              Selama puluhan tahun, MIS DDI COPPENG COPPENG telah melahirkan ribuan alumni yang sukses di berbagai 
               bidang. Kami terus berupaya meningkatkan kualitas pendidikan agar setiap siswa dapat tumbuh 
               menjadi pribadi yang cerdas, berakhlak mulia, dan siap menghadapi tantangan zaman.
             </p>

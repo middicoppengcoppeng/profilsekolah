@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 const WA_NUMBER = '6281234567890'
-const WA_MESSAGE = encodeURIComponent('Halo, saya ingin mendapatkan informasi mengenai MIS DDI Coppeng - Coppeng.')
+const WA_MESSAGE = encodeURIComponent('Halo, saya ingin mendapatkan informasi mengenai MIS DDI COPPENG COPPENG.')
 
 export default function WhatsAppFloat() {
   const [isVisible, setIsVisible] = useState(false)
@@ -28,7 +28,7 @@ export default function WhatsAppFloat() {
       className={`fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-emerald-500 text-white rounded-full shadow-lg hover:bg-emerald-600 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-emerald-500/50 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
       }`}
-      aria-label="Chat WhatsApp MIS DDI Coppeng - Coppeng"
+      aria-label="Chat WhatsApp MIS DDI COPPENG COPPENG"
       id="floating-whatsapp"
     >
       <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">

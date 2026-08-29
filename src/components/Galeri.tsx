@@ -48,7 +48,7 @@ export default function Galeri() {
             Galeri Foto
           </h2>
           <p className="section-subtitle">
-            Dokumentasi kegiatan dan suasana di MIS DDI Coppeng - Coppeng. 
+            Dokumentasi kegiatan dan suasana di MIS DDI COPPENG COPPENG. 
             Klik foto untuk melihat lebih besar.
           </p>
         </div>

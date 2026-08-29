@@ -2,7 +2,7 @@ import { useFadeIn } from '../hooks/useFadeIn'
 
 // Nomor WhatsApp panitia PPDB — ganti dengan nomor resmi
 const WA_NUMBER = '6281234567890'
-const WA_MESSAGE = encodeURIComponent('Halo, saya ingin mendapatkan informasi mengenai pendaftaran siswa baru MIS DDI Coppeng - Coppeng.')
+const WA_MESSAGE = encodeURIComponent('Halo, saya ingin mendapatkan informasi mengenai pendaftaran siswa baru MIS DDI COPPENG COPPENG.')
 
 const persyaratan = [
   'Berusia 6–7 tahun pada saat masuk (atau memenuhi syarat usia)',
@@ -40,7 +40,7 @@ export default function PPDB() {
             PPDB Tahun Ajaran 2025/2026
           </h2>
           <p className="text-white/70 text-base leading-relaxed">
-            MIS DDI Coppeng - Coppeng membuka pendaftaran siswa baru untuk tahun ajaran 2025/2026. 
+            MIS DDI COPPENG COPPENG membuka pendaftaran siswa baru untuk tahun ajaran 2025/2026. 
             Daftarkan putra-putri Anda sekarang dan jadikan mereka generasi muslim yang 
             cerdas dan berakhlak mulia.
           </p>

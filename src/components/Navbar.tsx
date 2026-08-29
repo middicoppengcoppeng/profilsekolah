@@ -43,14 +43,14 @@ export default function Navbar() {
           href="#beranda"
           onClick={(e) => handleNavClick(e, '#beranda')}
           className="flex items-center gap-3 focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-lg"
-          aria-label="MIS DDI Coppeng - Coppeng - Beranda"
+          aria-label="MIS DDI COPPENG COPPENG - Beranda"
         >
           {/* Logo Placeholder */}
           <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary-700 flex items-center justify-center flex-shrink-0">
             <span className="text-white font-bold text-sm md:text-base">MI</span>
           </div>
           <div className="hidden sm:block">
-            <p className="font-bold text-neutral-900 text-sm md:text-base leading-tight">MIS DDI Coppeng - Coppeng</p>
+            <p className="font-bold text-neutral-900 text-sm md:text-base leading-tight">MIS DDI COPPENG COPPENG</p>
             <p className="text-neutral-500 text-xs">Desa Soga, Kec. Marioriwawo, Kab. Soppeng</p>
           </div>
         </a>

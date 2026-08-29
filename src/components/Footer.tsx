@@ -26,7 +26,7 @@ export default function Footer() {
                 <span className="text-white font-bold text-sm">MI</span>
               </div>
               <div>
-                <p className="font-bold text-white">MIS DDI Coppeng - Coppeng</p>
+                <p className="font-bold text-white">MIS DDI COPPENG COPPENG</p>
                 <p className="text-neutral-400 text-xs">Desa Soga, Kec. Marioriwawo, Kab. Soppeng</p>
               </div>
             </div>
@@ -40,7 +40,7 @@ export default function Footer() {
               <a
                 href="#"
                 className="w-9 h-9 rounded-lg bg-white/5 hover:bg-white/15 flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white"
-                aria-label="Facebook MIS DDI Coppeng - Coppeng"
+                aria-label="Facebook MIS DDI COPPENG COPPENG"
                 id="footer-facebook"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -50,7 +50,7 @@ export default function Footer() {
               <a
                 href="#"
                 className="w-9 h-9 rounded-lg bg-white/5 hover:bg-white/15 flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white"
-                aria-label="Instagram MIS DDI Coppeng - Coppeng"
+                aria-label="Instagram MIS DDI COPPENG COPPENG"
                 id="footer-instagram"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -58,11 +58,11 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href={`https://wa.me/6281234567890?text=${encodeURIComponent('Halo, saya ingin mendapatkan informasi mengenai MIS DDI Coppeng - Coppeng.')}`}
+                href={`https://wa.me/6281234567890?text=${encodeURIComponent('Halo, saya ingin mendapatkan informasi mengenai MIS DDI COPPENG COPPENG.')}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg bg-white/5 hover:bg-white/15 flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white"
-                aria-label="WhatsApp MIS DDI Coppeng - Coppeng"
+                aria-label="WhatsApp MIS DDI COPPENG COPPENG"
                 id="footer-whatsapp"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -128,7 +128,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-neutral-500 text-sm text-center">
-            © 2026 MIS DDI Coppeng - Coppeng. All rights reserved.
+            © 2026 MIS DDI COPPENG COPPENG. All rights reserved.
           </p>
           <p className="text-neutral-600 text-xs">
             Bernaung di bawah Darud Da'wah Wal-Irsyad (DDI)

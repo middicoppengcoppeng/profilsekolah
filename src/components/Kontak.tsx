@@ -1,7 +1,7 @@
 import { useFadeIn } from '../hooks/useFadeIn'
 
 const WA_NUMBER = '6281234567890'
-const WA_MESSAGE = encodeURIComponent('Halo, saya ingin mendapatkan informasi mengenai MIS DDI Coppeng - Coppeng.')
+const WA_MESSAGE = encodeURIComponent('Halo, saya ingin mendapatkan informasi mengenai MIS DDI COPPENG COPPENG.')
 
 const MAPS_EMBED = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.6149763901954!2d120.01249727353044!3d-4.482406647469522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbe050976987871%3A0x31708a88ddcaba49!2sMadrasah%20ibtidaiyah%20(%20MIS%20)%20coppeng%20coppeng!5e0!3m2!1sid!2sid!4v1788020517636!5m2!1sid!2sid`
 
@@ -36,7 +36,7 @@ export default function Kontak() {
             <div className="bg-white rounded-2xl border border-neutral-100 p-6 space-y-5">
               {/* Nama Madrasah */}
               <div>
-                <h3 className="font-bold text-neutral-900 text-lg mb-1">MIS DDI Coppeng - Coppeng</h3>
+                <h3 className="font-bold text-neutral-900 text-lg mb-1">MIS DDI COPPENG COPPENG</h3>
                 <p className="text-neutral-500 text-sm">Madrasah Ibtidaiyah DDI Coppeng</p>
               </div>
 
@@ -137,7 +137,7 @@ export default function Kontak() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="strict-origin-when-cross-origin"
-                title="Lokasi MIS DDI Coppeng - Coppeng di Google Maps"
+                title="Lokasi MIS DDI COPPENG COPPENG di Google Maps"
                 aria-label="Peta lokasi MIS DDI Coppeng - Desa Soga, Kec. Marioriwawo, Kab. Soppeng"
               />
             </div>

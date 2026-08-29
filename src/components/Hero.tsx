@@ -43,7 +43,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-white/75 text-base md:text-lg leading-relaxed mb-8 max-w-xl">
-              MIS DDI Coppeng - Coppeng hadir untuk membentuk generasi muslim yang cerdas, berkarakter, 
+              MIS DDI COPPENG COPPENG hadir untuk membentuk generasi muslim yang cerdas, berkarakter, 
               dan berakhlak mulia melalui pendidikan dasar yang mengintegrasikan ilmu umum 
               dengan nilai-nilai keislaman.
             </p>

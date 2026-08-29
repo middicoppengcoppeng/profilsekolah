@@ -80,7 +80,7 @@ export default function Keunggulan() {
         >
           <span className="section-tag">Mengapa Kami</span>
           <h2 id="keunggulan-title" className="section-title">
-            Keunggulan MIS DDI Coppeng - Coppeng
+            Keunggulan MIS DDI COPPENG COPPENG
           </h2>
           <p className="section-subtitle">
             Kami berkomitmen untuk memberikan pendidikan terbaik yang mempersiapkan 
