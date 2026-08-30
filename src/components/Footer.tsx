@@ -40,7 +40,7 @@ export default function Footer() {
             {/* Social Media */}
             <div className="flex items-center gap-3 mt-5">
               <a
-                href="#"
+                href="https://www.facebook.com/share/1DgrV1CEpc/"
                 className="w-9 h-9 rounded-lg bg-white/5 hover:bg-white/15 flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white"
                 aria-label="Facebook MIS DDI COPPENG COPPENG"
                 id="footer-facebook"
@@ -50,7 +50,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/middi_coppengcoppeng?igsi=dHFkaXN5OG9tY3pt"
                 className="w-9 h-9 rounded-lg bg-white/5 hover:bg-white/15 flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white"
                 aria-label="Instagram MIS DDI COPPENG COPPENG"
                 id="footer-instagram"
