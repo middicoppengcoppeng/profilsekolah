@@ -4,6 +4,7 @@ const fasilitasList = [
   {
     id: 1,
     title: 'Ruang Kelas',
+    img: '/images/fasilitas/ruang-kelas.jpg',
     desc: 'Ruang kelas yang nyaman, bersih, dan dilengkapi perabot belajar yang memadai untuk menunjang proses pembelajaran.',
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -14,6 +15,7 @@ const fasilitasList = [
   {
     id: 2,
     title: 'Perpustakaan',
+    img: '/images/fasilitas/perpustakaan.jpg',
     desc: 'Koleksi buku pelajaran, buku cerita, dan referensi islami yang beragam untuk mendukung budaya membaca siswa.',
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -24,6 +26,7 @@ const fasilitasList = [
   {
     id: 3,
     title: 'Mushola',
+    img: '/images/fasilitas/mushola.jpg',
     desc: 'Tempat ibadah yang bersih dan representatif untuk sholat berjamaah, pembiasaan ibadah, dan kegiatan keagamaan.',
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -34,6 +37,7 @@ const fasilitasList = [
   {
     id: 4,
     title: 'Lapangan Olahraga',
+    img: '/images/fasilitas/lapangan.jpg',
     desc: 'Lapangan yang cukup luas untuk kegiatan olahraga, upacara bendera, dan berbagai aktivitas luar ruangan siswa.',
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -44,6 +48,7 @@ const fasilitasList = [
   {
     id: 5,
     title: 'UKS',
+    img: '/images/fasilitas/uks.jpg',
     desc: 'Unit Kesehatan Sekolah yang siap memberikan pertolongan pertama dan memantau kesehatan siswa sehari-hari.',
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -54,6 +59,7 @@ const fasilitasList = [
   {
     id: 6,
     title: 'Toilet & Sanitasi',
+    img: '/images/fasilitas/ruang-kelas.jpg',
     desc: 'Toilet yang bersih, terpisah antara putra dan putri, serta fasilitas cuci tangan yang memadai.',
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -92,12 +98,13 @@ export default function Fasilitas() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {fasilitasList.map((item) => (
             <div key={item.id} className="group">
-              {/* Photo placeholder */}
-              <div className="aspect-video rounded-xl bg-neutral-100 border border-neutral-200 mb-4 flex flex-col items-center justify-center text-neutral-400 gap-2 overflow-hidden group-hover:border-primary-200 transition-colors duration-300">
-                <svg className="w-10 h-10 text-neutral-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p className="text-xs text-neutral-300">Foto {item.title}</p>
+              {/* Photo */}
+              <div className="aspect-video rounded-xl overflow-hidden mb-4 group-hover:shadow-md transition-shadow duration-300">
+                <img
+                  src={item.img}
+                  alt={`Foto ${item.title}`}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
 
               <div className="flex items-start gap-3">

@@ -22,9 +22,11 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-full bg-primary-700 flex items-center justify-center">
-                <span className="text-white font-bold text-sm">MI</span>
-              </div>
+              <img
+                src="/images/logo.png"
+                alt="Logo MIS DDI COPPENG"
+                className="w-10 h-10 object-contain flex-shrink-0"
+              />
               <div>
                 <p className="font-bold text-white">MIS DDI COPPENG COPPENG</p>
                 <p className="text-neutral-400 text-xs">Desa Soga, Kec. Marioriwawo, Kab. Soppeng</p>
