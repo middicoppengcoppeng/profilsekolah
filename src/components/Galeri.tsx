@@ -1,20 +1,16 @@
 import { useState } from 'react'
 import { useFadeIn } from '../hooks/useFadeIn'
 
-// 8 placeholder items untuk galeri
-const galeriItems = Array.from({ length: 8 }, (_, i) => ({
-  id: i + 1,
-  label: [
-    'Gedung Madrasah',
-    'Kegiatan Belajar',
-    'Sholat Berjamaah',
-    'Upacara Bendera',
-    'Kegiatan Pramuka',
-    'Perlombaan Siswa',
-    'Lingkungan Madrasah',
-    'Kegiatan Sosial',
-  ][i],
-}))
+const galeriItems = [
+  { id: 1, label: 'Hasil Belajar', img: '/images/galeri/hasil belajar.jpeg' },
+  { id: 2, label: 'Lomba Menari', img: '/images/galeri/lomba menari.jpeg' },
+  { id: 3, label: 'Sholat Berjamaah', img: '/images/galeri/sholat berjamaah.jpeg' },
+  { id: 4, label: 'Pramuka', img: '/images/galeri/pramuka.jpeg' },
+  { id: 5, label: 'Mengaji Bersama', img: '/images/galeri/mengaji bersama.jpeg' },
+  { id: 6, label: 'Makan Bersama', img: '/images/galeri/makan bersama.jpeg' },
+  { id: 7, label: 'Lomba Gerak Jalan', img: '/images/galeri/lomba gerak jalan.jpeg' },
+  { id: 8, label: 'Foto Kegiatan Lainnya', img: '' },
+]
 
 export default function Galeri() {
   const ref = useFadeIn()
@@ -66,13 +62,17 @@ export default function Galeri() {
               aria-label={`Buka foto: ${item.label}`}
               id={`galeri-item-${item.id}`}
             >
-              {/* Placeholder */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-neutral-300 gap-2">
-                <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p className="text-xs px-2 text-center">{item.label}</p>
-              </div>
+              {/* Photo or Placeholder */}
+              {item.img ? (
+                <img src={item.img} alt={item.label} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              ) : (
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-neutral-300 gap-2">
+                  <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  <p className="text-xs px-2 text-center">{item.label}</p>
+                </div>
+              )}
 
               {/* Hover overlay */}
               <div className="absolute inset-0 bg-primary-700/0 group-hover:bg-primary-700/20 transition-all duration-300 flex items-center justify-center">
@@ -117,16 +117,25 @@ export default function Galeri() {
           </button>
 
           <div
-            className="max-w-3xl w-full mx-16 aspect-[4/3] bg-neutral-800 rounded-xl flex flex-col items-center justify-center text-neutral-400 gap-3"
+            className="max-w-4xl w-full mx-16 aspect-square md:aspect-video bg-neutral-900 rounded-xl flex flex-col items-center justify-center text-neutral-400 gap-3 overflow-hidden relative"
             onClick={(e) => e.stopPropagation()}
           >
-            <svg className="w-16 h-16 text-neutral-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
-            <p className="text-sm">{galeriItems[lightbox - 1]?.label}</p>
-            <p className="text-xs text-neutral-600">
-              {lightbox} / {galeriItems.length}
-            </p>
+            {galeriItems[lightbox - 1]?.img ? (
+              <img src={galeriItems[lightbox - 1].img} alt={galeriItems[lightbox - 1].label} className="w-full h-full object-contain" />
+            ) : (
+              <>
+                <svg className="w-16 h-16 text-neutral-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <p className="text-sm">{galeriItems[lightbox - 1]?.label}</p>
+              </>
+            )}
+            
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/60 px-4 py-2 rounded-full backdrop-blur-sm pointer-events-none">
+              <p className="text-xs text-white">
+                {lightbox} / {galeriItems.length} — {galeriItems[lightbox - 1]?.label}
+              </p>
+            </div>
           </div>
 
           <button

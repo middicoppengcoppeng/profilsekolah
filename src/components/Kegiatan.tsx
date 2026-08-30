@@ -6,36 +6,42 @@ const kegiatanList = [
     title: 'Pembelajaran di Kelas',
     desc: 'Suasana belajar aktif di dalam kelas dengan pendekatan yang menyenangkan.',
     category: 'Akademik',
+    img: '/images/kegiatan/pembelajaran.jpeg',
   },
   {
     id: 2,
     title: 'Upacara Bendera',
     desc: 'Upacara rutin yang membentuk kedisiplinan dan rasa cinta tanah air.',
     category: 'Pembentukan Karakter',
+    img: '/images/kegiatan/upacara.jpeg',
   },
   {
     id: 3,
     title: 'Kegiatan Keagamaan',
     desc: 'Sholat berjamaah, dzikir pagi, dan berbagai kegiatan ibadah rutin.',
     category: 'Keagamaan',
+    img: '/images/kegiatan/kegiatan keagamaaan.jpeg',
   },
   {
     id: 4,
     title: 'Pramuka',
     desc: 'Latihan pramuka yang melatih keterampilan, keberanian, dan kemandirian.',
     category: 'Ekstrakurikuler',
+    img: '/images/kegiatan/pramuka.jpeg',
   },
   {
     id: 5,
     title: 'Perlombaan',
     desc: 'Berbagai lomba akademik dan non-akademik baik internal maupun antar madrasah.',
     category: 'Prestasi',
+    img: '/images/kegiatan/perlombaan.jpeg',
   },
   {
     id: 6,
     title: 'Kegiatan Sosial',
     desc: 'Kegiatan bakti sosial, santunan anak yatim, dan peduli lingkungan sekitar.',
     category: 'Sosial',
+    img: '',
   },
 ]
 
@@ -77,13 +83,19 @@ export default function Kegiatan() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {kegiatanList.map((item) => (
             <div key={item.id} className="group bg-white rounded-2xl overflow-hidden border border-neutral-100 hover:shadow-md transition-all duration-300">
-              {/* Photo placeholder */}
-              <div className="aspect-video bg-neutral-100 flex flex-col items-center justify-center text-neutral-300 gap-2 border-b border-neutral-100">
-                <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p className="text-xs">Foto {item.title}</p>
-              </div>
+              {/* Photo or placeholder */}
+              {item.img ? (
+                <div className="aspect-video overflow-hidden border-b border-neutral-100">
+                  <img src={item.img} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+              ) : (
+                <div className="aspect-video bg-neutral-100 flex flex-col items-center justify-center text-neutral-300 gap-2 border-b border-neutral-100">
+                  <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  <p className="text-xs">Foto {item.title}</p>
+                </div>
+              )}
 
               <div className="p-5">
                 <span className={`inline-block text-xs font-semibold px-3 py-1 rounded-full mb-3 ${categoryColors[item.category]}`}>

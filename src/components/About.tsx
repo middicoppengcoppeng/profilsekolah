@@ -1,13 +1,14 @@
 import { useFadeIn } from '../hooks/useFadeIn'
 
 export default function About() {
-  const ref = useFadeIn()
+  const imageRef = useFadeIn()
+  const textRef = useFadeIn()
 
   const stats = [
-    { label: 'Tahun Berdiri', value: '1990' },
-    { label: 'Status Akreditasi', value: 'Terakreditasi' },
-    { label: 'Jumlah Siswa', value: '300+' },
-    { label: 'Tenaga Pendidik', value: '20+' },
+    { label: 'Tahun Berdiri', value: '1979' },
+    { label: 'Status Akreditasi', value: 'B' },
+    { label: 'Jumlah Siswa', value: '23' },
+    { label: 'Tenaga Pendidik', value: '9' },
   ]
 
   return (
@@ -17,17 +18,15 @@ export default function About() {
       aria-labelledby="tentang-title"
     >
       <div className="container-custom">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="flex flex-col gap-12 lg:gap-16 max-w-4xl mx-auto items-center">
           {/* Image Side */}
-          <div className="relative fade-in-section" ref={ref as React.RefObject<HTMLDivElement>}>
-            <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-primary-100 border border-primary-200">
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-primary-300 gap-4">
-                <svg className="w-16 h-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p className="text-sm font-medium">Foto Madrasah</p>
-                <p className="text-xs text-primary-200">Ganti dengan foto asli</p>
-              </div>
+          <div className="relative fade-in-section w-full" ref={imageRef as React.RefObject<HTMLDivElement>}>
+            <div className="relative rounded-2xl overflow-hidden aspect-[4/3] border border-primary-200 shadow-md">
+              <img
+                src="/images/hero/foto madrasah.jpeg"
+                alt="Foto MIS DDI COPPENG COPPENG"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              />
             </div>
 
             {/* Decorative element */}
@@ -46,27 +45,28 @@ export default function About() {
           </div>
 
           {/* Text Side */}
-          <div className="mt-12 lg:mt-0 fade-in-section" ref={useFadeIn() as React.RefObject<HTMLDivElement>}>
+          <div className="mt-12 lg:mt-0 fade-in-section w-full" ref={textRef as React.RefObject<HTMLDivElement>}>
             <span className="section-tag">Tentang Kami</span>
             <h2 id="tentang-title" className="section-title">
               Mengenal MIS DDI COPPENG COPPENG
             </h2>
 
             <p className="text-neutral-600 leading-relaxed mb-6">
-              Madrasah Ibtidaiyah DDI Coppeng adalah lembaga pendidikan dasar Islam yang telah berdiri 
-              sejak tahun 1990 di Desa Soga, Kec. Marioriwawo, Kab. Soppeng. Madrasah ini bernaung di bawah Darud Da'wah 
-              Wal-Irsyad (DDI) dan berkomitmen untuk memberikan pendidikan berkualitas yang mengintegrasikan 
+              Madrasah Ibtidaiyah DDI Coppeng adalah lembaga pendidikan dasar Islam yang telah berdiri
+              sejak tahun 1990 di Desa Soga, Kec. Marioriwawo, Kab. Soppeng. Madrasah ini bernaung di bawah Darud Da'wah
+              Wal-Irsyad (DDI) dan berkomitmen untuk memberikan pendidikan berkualitas yang mengintegrasikan
               ilmu pengetahuan umum dengan nilai-nilai keislaman.
             </p>
 
             <p className="text-neutral-600 leading-relaxed mb-8">
-              Selama puluhan tahun, MIS DDI COPPENG COPPENG telah melahirkan ribuan alumni yang sukses di berbagai 
-              bidang. Kami terus berupaya meningkatkan kualitas pendidikan agar setiap siswa dapat tumbuh 
+              Selama puluhan tahun, MIS DDI COPPENG COPPENG telah melahirkan ribuan alumni yang sukses di berbagai
+              bidang. Kami terus berupaya meningkatkan kualitas pendidikan agar setiap siswa dapat tumbuh
               menjadi pribadi yang cerdas, berakhlak mulia, dan siap menghadapi tantangan zaman.
             </p>
 
-            {/* Visi Misi */}
+            {/* Visi, Misi, Tujuan */}
             <div className="space-y-4">
+              {/* Visi */}
               <div className="p-4 bg-primary-50 rounded-xl border border-primary-100">
                 <div className="flex items-start gap-3">
                   <div className="w-8 h-8 rounded-lg bg-primary-700 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -77,13 +77,21 @@ export default function About() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-neutral-900 mb-1">Visi</h3>
-                    <p className="text-neutral-600 text-sm leading-relaxed">
-                      Terwujudnya madrasah yang unggul dalam prestasi, berkarakter islami, dan berdaya saing global.
+                    <p className="text-neutral-600 text-sm leading-relaxed mb-2 font-medium">
+                      “Mewujudkan Madrasah Ibtidaiyah yang Religius, Inovatif dan Kompetitif”
                     </p>
+                    <p className="text-neutral-600 text-sm leading-relaxed mb-1">Indikator:</p>
+                    <ul className="text-neutral-600 text-sm space-y-1 list-decimal ml-4">
+                      <li>Terwujudnya sikap religius beriman dan bertakwa kepada Allah SWT dalam aktivitas hidup sehari-hari.</li>
+                      <li>Terwujudnya pengembangan kurikulum madrasah unggulan yang menerapkan pembelajaran aktif, kreatif dan inovatif.</li>
+                      <li>Terwujudnya semangat berprestasi dan berdaya saing bidang akademik dan non-akademik.</li>
+                      <li>Terwujudnya sikap peduli dan berbudaya lingkungan yang melaksanakan upaya pelestarian lingkungan.</li>
+                    </ul>
                   </div>
                 </div>
               </div>
 
+              {/* Misi */}
               <div className="p-4 bg-secondary-50 rounded-xl border border-secondary-100">
                 <div className="flex items-start gap-3">
                   <div className="w-8 h-8 rounded-lg bg-secondary-500 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -93,10 +101,42 @@ export default function About() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-neutral-900 mb-1">Misi</h3>
-                    <ul className="text-neutral-600 text-sm space-y-1">
-                      <li>• Menyelenggarakan pendidikan yang mengintegrasikan ilmu umum dan agama</li>
-                      <li>• Membentuk karakter siswa yang disiplin, mandiri, dan bertanggung jawab</li>
-                      <li>• Menciptakan lingkungan belajar yang nyaman, aktif, dan menyenangkan</li>
+                    <ul className="text-neutral-600 text-sm space-y-1 list-decimal ml-4">
+                      <li>Menyelenggarakan kegiatan religius yang mendukung penguatan aqidah, ibadah, akhlak, dan silaturrahim.</li>
+                      <li>Menyelenggarakan kegiatan keagamaan secara kontinyu untuk memperkuat silaturahim antar guru, orang tua dan masyarakat.</li>
+                      <li>Mewujudkan madrasah ibtidaiyah yang religious, inovatif dan kompetitif.</li>
+                      <li>Meningkatkan kemampuan guru dalam melakukan berbagai inovasi pendidikan dan pembelajaran.</li>
+                      <li>Mengembangkan model-model pembelajaran inovatif untuk memperkuat sinergitas kecerdasan intelektual, emosional dan spiritual siswa.</li>
+                      <li>Menyediakan fasilitas pembelajaran yang menunjang terwujudnya kreatifitas siswa.</li>
+                      <li>Meningkatkan wawasan peserta didik dalam melakukan inovasi dengan memanfaatkan lingkungan sekitar.</li>
+                      <li>Menyiapkan Madrasah yang kompetitif di bidang sains dan sosial humaniora.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Tujuan */}
+              <div className="p-4 bg-blue-50 rounded-xl border border-blue-100">
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 rounded-lg bg-blue-500 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-neutral-900 mb-1">Tujuan</h3>
+                    <p className="text-neutral-600 text-sm leading-relaxed mb-2">
+                      Dengan berpedoman pada Visi dan Misi yang telah dirumuskan serta kondisi di madrasah, tujuan yang ingin dicapai adalah:
+                    </p>
+                    <ul className="text-neutral-600 text-sm space-y-1 list-decimal ml-4">
+                      <li>Terselenggaranya kegiatan religius yang mendukung penguatan aqidah, ibadah, akhlak, dan silaturrahim.</li>
+                      <li>Terselenggaranya kegiatan keagamaan secara kontinyu untuk memperkuat silaturahim antar guru, orang tua dan masyarakat.</li>
+                      <li>Menyiapkan guru dan staf sebagai suri tauladan bagi siswa dalam penegakan aqidah, ibadah dan akhlak.</li>
+                      <li>Meningkatnya kemampuan guru dalam melakukan berbagai inovasi pendidikan dan pembelajaran.</li>
+                      <li>Terselenggaranya model-model pembelajaran inovatif untuk memperkuat sinergitas kecerdasan intelektual, emosional dan spiritual siswa.</li>
+                      <li>Tersedianya fasilitas pembelajaran yang menunjang terwujudnya kreatifitas siswa.</li>
+                      <li>Terwujudnya wawasan dan pengalaman peserta didik dalam melakukan inovasi dangan memanfaatkan lingkungan sekitar.</li>
+                      <li>Tersedianya Madrasah yang kompetitif dibidang sains dan sosial humaniora.</li>
                     </ul>
                   </div>
                 </div>
