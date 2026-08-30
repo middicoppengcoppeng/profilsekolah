@@ -1,7 +1,7 @@
 import { useFadeIn } from '../hooks/useFadeIn'
 
 // Nomor WhatsApp panitia PPDB — ganti dengan nomor resmi
-const WA_NUMBER = '6281234567890'
+const WA_NUMBER = '6281258926464'
 const WA_MESSAGE = encodeURIComponent('Halo, saya ingin mendapatkan informasi mengenai pendaftaran siswa baru MIS DDI COPPENG COPPENG.')
 
 const persyaratan = [
@@ -37,10 +37,10 @@ export default function PPDB() {
             Penerimaan Peserta Didik Baru
           </span>
           <h2 id="ppdb-title" className="text-3xl md:text-4xl font-bold text-white mb-4">
-            PPDB Tahun Ajaran 2025/2026
+            PPDB Tahun Ajaran 2026/2027
           </h2>
           <p className="text-white/70 text-base leading-relaxed">
-            MIS DDI COPPENG COPPENG membuka pendaftaran siswa baru untuk tahun ajaran 2025/2026. 
+            MIS DDI COPPENG COPPENG membuka pendaftaran siswa baru untuk tahun ajaran 2026/2027. 
             Daftarkan putra-putri Anda sekarang dan jadikan mereka generasi muslim yang 
             cerdas dan berakhlak mulia.
           </p>
@@ -53,11 +53,11 @@ export default function PPDB() {
 
             <div className="space-y-4 mb-8">
               {[
-                { label: 'Tahun Ajaran', value: '2025 / 2026' },
-                { label: 'Periode Pendaftaran', value: 'Januari – Juni 2025' },
+                { label: 'Tahun Ajaran', value: '2026 / 2027' },
+                { label: 'Periode Pendaftaran', value: 'Januari – Juni 2026' },
                 { label: 'Lokasi Pendaftaran', value: 'Kantor MIS DDI Coppeng - Desa Soga, Kec. Marioriwawo, Kab. Soppeng' },
-                { label: 'Jam Layanan', value: 'Senin – Sabtu, 08.00 – 12.00 WITA' },
-                { label: 'Kontak Panitia', value: '0812-XXXX-XXXX (Placeholder)' },
+                { label: 'Jam Layanan', value: 'Senin – Sabtu, 07.30 – 12.00 WITA' },
+                { label: 'Kontak Panitia', value: '0812-5892-6464' },
               ].map((info) => (
                 <div key={info.label} className="flex items-start gap-3 border-b border-white/10 pb-4">
                   <div className="w-2 h-2 rounded-full bg-secondary-400 mt-2 flex-shrink-0" />

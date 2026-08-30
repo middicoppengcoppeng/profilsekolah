@@ -51,9 +51,9 @@ export default function Navbar() {
             alt="Logo MIS DDI COPPENG"
             className="w-10 h-10 md:w-12 md:h-12 object-contain flex-shrink-0"
           />
-          <div className="hidden sm:block">
-            <p className="font-bold text-neutral-900 text-sm md:text-base leading-tight">MIS DDI COPPENG COPPENG</p>
-            <p className="text-neutral-500 text-xs">Desa Soga, Kec. Marioriwawo, Kab. Soppeng</p>
+          <div>
+            <p className="font-bold text-neutral-900 text-xs sm:text-sm md:text-base leading-tight">MIS DDI COPPENG COPPENG</p>
+            <p className="text-neutral-500 text-[10px] sm:text-xs hidden sm:block">Desa Soga, Kec. Marioriwawo, Kab. Soppeng</p>
           </div>
         </a>
 

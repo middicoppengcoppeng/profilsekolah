@@ -1,6 +1,6 @@
 import { useFadeIn } from '../hooks/useFadeIn'
 
-const WA_NUMBER = '6281234567890'
+const WA_NUMBER = '6281258926464'
 const WA_MESSAGE = encodeURIComponent('Halo, saya ingin mendapatkan informasi mengenai MIS DDI COPPENG COPPENG.')
 
 const MAPS_EMBED = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.6149763901954!2d120.01249727353044!3d-4.482406647469522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbe050976987871%3A0x31708a88ddcaba49!2sMadrasah%20ibtidaiyah%20(%20MIS%20)%20coppeng%20coppeng!5e0!3m2!1sid!2sid!4v1788020517636!5m2!1sid!2sid`
@@ -67,7 +67,7 @@ export default function Kontak() {
                 </div>
                 <div>
                   <p className="text-xs text-neutral-400 font-medium mb-0.5">WhatsApp</p>
-                  <p className="text-neutral-700 text-sm">0812-XXXX-XXXX (Placeholder)</p>
+                  <p className="text-neutral-700 text-sm">0812-5892-6464</p>
                 </div>
               </div>
 
@@ -106,7 +106,7 @@ export default function Kontak() {
                 </div>
                 <div>
                   <p className="text-xs text-neutral-400 font-medium mb-0.5">Jam Pelayanan</p>
-                  <p className="text-neutral-700 text-sm">Senin – Sabtu<br />07.30 – 14.00 WITA</p>
+                  <p className="text-neutral-700 text-sm">Senin – Sabtu<br />07.30 – 12.00 WITA</p>
                 </div>
               </div>
             </div>
